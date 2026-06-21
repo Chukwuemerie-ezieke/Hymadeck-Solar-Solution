@@ -40,6 +40,7 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:info@hymadecksolar.com">Email Hymadeck</a>
         <a class="btn btn-secondary" href="tel:+2340000000000">Call now</a>
+        <a class="btn" style="background:#25D366;color:#fff;border-color:transparent" href="https://wa.me/2340000000000?text=Hello%20Hymadeck%20Solar%20Solution,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
       </div>
       <div class="stats">
         <div class="stat"><strong>Consultations</strong><span>Use this page to invite project discussions and quote requests.</span></div>
@@ -69,6 +70,13 @@
     </div>
     <div class="card reveal" style="padding:var(--space-8)">
       <h3 style="font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:1rem">Send an enquiry</h3>
+      <!-- Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree endpoint URL (e.g., https://formspree.io/f/abcdefg) -->
+      <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" style="display:grid;gap:1rem">
+        <input type="text" name="name" placeholder="Full name" required style="padding:1rem;border:1px solid var(--color-border);border-radius:1rem;background:var(--color-surface-2)">
+        <input type="email" name="_replyto" placeholder="Email address" required style="padding:1rem;border:1px solid var(--color-border);border-radius:1rem;background:var(--color-surface-2)">
+        <select name="service" style="padding:1rem;border:1px solid var(--color-border);border-radius:1rem;background:var(--color-surface-2)"><option>Residential solar</option><option>Commercial solar</option><option>Industrial solar</option><option>Maintenance support</option></select>
+        <textarea name="message" placeholder="Project details" required style="padding:1rem;border:1px solid var(--color-border);border-radius:1rem;background:var(--color-surface-2);min-height:150px"></textarea>
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
       <form style="display:grid;gap:1rem">
         <input type="text" placeholder="Full name" style="padding:1rem;border:1px solid var(--color-border);border-radius:1rem;background:var(--color-surface-2)">
         <input type="email" placeholder="Email address" style="padding:1rem;border:1px solid var(--color-border);border-radius:1rem;background:var(--color-surface-2)">
