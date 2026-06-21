@@ -50,3 +50,22 @@ You can easily customize the site's theme by modifying these variables:
 - Font scales and spacing tokens (`--text-*` and `--space-*`)
 
 The site includes a built-in dark mode which can be toggled using the button in the navigation header, or it will fall back to your OS's preferred color scheme.
+
+## Premium Upgrade & E-commerce Strategy
+
+The site has been upgraded to a premium business layout featuring refined colors, enhanced typography, and trust signals (warranties, certifications, partner logos).
+
+### E-commerce Implementation Note
+To add e-commerce without abandoning the fast, secure, and maintainable static HTML architecture, we have integrated **Snipcart**. Snipcart provides a drop-in shopping cart and checkout modal that injects directly into the static site.
+
+- **Shop Page (`pages/shop.html`):** Displays the product catalog.
+- **Product Detail (`pages/product.html`):** Displays deep-dives into specific products.
+- **Cart & Checkout (`pages/cart.html` & `pages/checkout.html`):** These pages redirect to the Shop page. This is because Snipcart natively handles cart and checkout globally via a UI overlay triggered by the "Cart" buttons in the navigation header, meaning dedicated HTML pages for these flows are unnecessary and redundant in this stack.
+
+### Follow-up Work for Live E-commerce
+Before accepting real payments, the following steps must be completed:
+1. **Snipcart Account:** Create an account at [snipcart.com](https://snipcart.com) and replace the placeholder `data-api-key` in `js/main.js` or the global HTML with your Live API key.
+2. **Domain Verification:** Snipcart requires the site to be hosted on a public domain to verify product prices securely.
+3. **Payment Gateway:** Connect a payment gateway (e.g., Paystack, Flutterwave, or Stripe depending on your region) inside the Snipcart dashboard.
+4. **Shipping & Taxes:** Configure shipping rates (e.g., flat rate or weight-based via custom fields) and applicable taxes in the Snipcart dashboard.
+5. **Real Product Data:** Update the `data-item-*` attributes on the "Add to Cart" buttons in `shop.html` and `product.html` with your actual product IDs, prices, names, and image URLs.
