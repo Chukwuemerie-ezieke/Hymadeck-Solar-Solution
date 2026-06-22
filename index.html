@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Snipcart CSS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
 </head>
 <body>
   <header class="site-header">
@@ -23,8 +26,10 @@
         <a href="./pages/projects.html">Projects</a>
         <a href="./pages/about.html">About</a>
         <a href="./pages/contact.html">Contact</a>
+        <a href="./pages/shop.html" style="color:var(--color-primary);font-weight:700">Shop</a>
       </nav>
       <div class="actions">
+        <button class="snipcart-checkout btn btn-secondary" style="padding:.5rem 1rem"><span class="snipcart-items-count" style="background:var(--color-primary);color:#fff;border-radius:50%;padding:2px 6px;font-size:12px;margin-right:4px">0</span> Cart</button>
         <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">◐</button>
         <a class="btn btn-primary" href="./pages/contact.html">Request a consultation</a>
       </div>
@@ -57,7 +62,36 @@
       </div>
     </section>
 
-    <section class="section" id="services">
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" style="text-align: center; display: block; margin-bottom: var(--space-6);">
+          <h2 style="font-size: var(--text-lg); color: var(--color-text-muted);">Trusted by industry leaders and certified for excellence</h2>
+        </div>
+        <div class="trust-badges" style="justify-content: center; border-top: none; padding-top: 0;">
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            10-Year Warranty
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            Certified Installers
+          </div>
+          <div class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            Flexible Financing
+          </div>
+        </div>
+        <!-- Placeholder for logos -->
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; opacity: 0.6;">
+            <div style="width: 120px; height: 40px; background: var(--color-border); border-radius: 4px;"></div>
+            <div style="width: 120px; height: 40px; background: var(--color-border); border-radius: 4px;"></div>
+            <div style="width: 120px; height: 40px; background: var(--color-border); border-radius: 4px;"></div>
+            <div style="width: 120px; height: 40px; background: var(--color-border); border-radius: 4px;"></div>
+        </div>
+      </div>
+    </section>
+<section class="section" id="services">
       <div class="container">
         <div class="section-head reveal">
           <div>
@@ -162,5 +196,9 @@
     </div>
   </footer>
   <script src="./js/main.js"></script>
+
+  <!-- Snipcart JS -->
+  <script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="ODZlMWNhYzItMzI0Zi00YWNjLTg5YzYtY2Q4ZTA4NzNlYmMzNjM4NjMyMTE0MTIyNjcxNjUx"></div>
 </body>
 </html>
